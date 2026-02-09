@@ -25,15 +25,16 @@
             },
             backdropBlur: {
               xs: '2px',
+              xl: '40px',
             },
             animation: {
-              'float': 'float 6s ease-in-out infinite',
-              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 8s ease-in-out infinite',
+              'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
             },
             keyframes: {
               float: {
                 '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-10px)' },
+                '50%': { transform: 'translateY(-15px)' },
               }
             }
           },
@@ -43,21 +44,27 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
     <style>
       :root {
-        --bg-color: #f8fafc; /* Slate 50 */
-        --text-primary: #0f172a; /* Slate 900 */
-        --text-secondary: #475569; /* Slate 600 */
-        --glass-bg: rgba(255, 255, 255, 0.6);
-        --glass-border: rgba(255, 255, 255, 0.4);
-        --glass-shadow: rgba(0, 0, 0, 0.05);
+        --bg-color: #f0f4f8; /* Softer Slate 50 */
+        --text-primary: #0f172a;
+        --text-secondary: #475569;
+        
+        /* Light Mode Glass */
+        --glass-bg: rgba(255, 255, 255, 0.4);
+        --glass-border: rgba(255, 255, 255, 0.6);
+        --glass-shadow: rgba(17, 12, 46, 0.1);
+        --glass-highlight: rgba(255, 255, 255, 0.8);
       }
 
       .dark {
-        --bg-color: #0f172a; /* Slate 950 */
-        --text-primary: #f1f5f9; /* Slate 100 */
-        --text-secondary: #94a3b8; /* Slate 400 */
-        --glass-bg: rgba(255, 255, 255, 0.03);
+        --bg-color: #020617; /* Deep Slate 950 */
+        --text-primary: #f8fafc;
+        --text-secondary: #94a3b8;
+        
+        /* Dark Mode Glass */
+        --glass-bg: rgba(15, 23, 42, 0.3);
         --glass-border: rgba(255, 255, 255, 0.08);
-        --glass-shadow: rgba(0, 0, 0, 0.2);
+        --glass-shadow: rgba(0, 0, 0, 0.4);
+        --glass-highlight: rgba(255, 255, 255, 0.05);
       }
 
       body {
@@ -65,7 +72,7 @@
         background-color: var(--bg-color);
         color: var(--text-primary);
         overflow-x: hidden;
-        transition: background-color 0.5s ease, color 0.5s ease;
+        transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.5s ease;
       }
 
       /* Custom Scrollbar */
@@ -77,49 +84,64 @@
         background: transparent; 
       }
       ::-webkit-scrollbar-thumb {
-        background: rgba(100, 116, 139, 0.2); 
+        background: rgba(148, 163, 184, 0.2); 
         border-radius: 4px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: rgba(100, 116, 139, 0.4); 
+        background: rgba(148, 163, 184, 0.4); 
       }
       
+      /* Liquid Glass Effect */
       .glass-panel {
         background: var(--glass-bg);
-        backdrop-filter: blur(20px) saturate(160%);
-        -webkit-backdrop-filter: blur(20px) saturate(160%);
+        /* Powerful refractive blur */
+        backdrop-filter: blur(25px) saturate(180%) contrast(95%);
+        -webkit-backdrop-filter: blur(25px) saturate(180%) contrast(95%);
+        
         border: 1px solid var(--glass-border);
-        box-shadow: 0 4px 30px var(--glass-shadow);
+        box-shadow: 
+          0 8px 32px 0 var(--glass-shadow),
+          inset 0 0 0 1px var(--glass-highlight); /* Inner rim light */
       }
 
-      /* High refraction blur for overlaid modals/panels */
       .glass-refract {
-        backdrop-filter: blur(40px) saturate(180%);
-        -webkit-backdrop-filter: blur(40px) saturate(180%);
+        backdrop-filter: blur(50px) saturate(200%);
+        -webkit-backdrop-filter: blur(50px) saturate(200%);
+        background: rgba(255, 255, 255, 0.05);
+      }
+      
+      .glass-card-hover {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       }
       
       .glass-card-hover:hover {
-        background: rgba(255, 255, 255, 0.1); /* Slightly lighter on hover in dark, or darker in light? Handled via Tailwind classes usually */
-        border-color: rgba(255, 255, 255, 0.3);
-        transform: translateY(-2px);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        transform: translateY(-4px) scale(1.01);
+        box-shadow: 
+          0 20px 40px -5px rgba(0,0,0,0.2),
+          inset 0 0 0 1px rgba(255,255,255,0.2);
+        background: linear-gradient(
+          to bottom right, 
+          rgba(255,255,255,0.1) 0%, 
+          rgba(255,255,255,0.02) 100%
+        );
       }
     </style>
     <script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "recharts": "https://esm.sh/recharts@^3.7.0",
-    "react-dom": "https://esm.sh/react-dom@^19.2.4"
-  }
-}
-</script>
+    {
+      "imports": {
+        "react/": "https://esm.sh/react@^19.2.4/",
+        "react": "https://esm.sh/react@^19.2.4",
+        "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+        "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+        "recharts": "https://esm.sh/recharts@^3.7.0",
+        "react-dom": "https://esm.sh/react-dom@^19.2.4"
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
